@@ -435,10 +435,12 @@ function tampil_data($koneksi){
 
                 ?></td>
 				<td>
-					<a href="index.php?aksi=update&id=<?php echo $data['nik']; ?>&nik=<?php echo $data['nik']; ?>&nama_alternatif=<?php echo $data['nama_alternatif']; ?>">Edit</a>
+					<a href="index.php?aksi=update&id=<?php echo $data['id']; ?>&nik=<?php echo $data['nik']; ?>&nama_alternatif=<?php echo $data['nama_alternatif']; ?>&alamat=<?php echo $data['alamat']; ?>&kecamatan=<?php echo $data['kecamatan']; ?>&kelurahan=<?php echo $data['kelurahan']; ?>
+																				&kit1=<?php echo $data['kit1']; ?>&kit2=<?php echo $data['kit2']; ?>&kit3=<?php echo $data['kit3']; ?>&kit4=<?php echo $data['kit4']; ?>&kit5=<?php echo $data['kit5']; ?>&kit5=<?php echo $data['kit5']; ?>
+																				&kit6=<?php echo $data['kit6']; ?>&kit6=<?php echo $data['kit6']; ?>&kit7=<?php echo $data['kit7']; ?>&kit8=<?php echo $data['kit8']; ?>&kit9=<?php echo $data['kit9']; ?>&periode=<?php echo $data['periode']; ?>">Edit</a>
 				</td>
 				<td>
-					<a href="index.php?aksi=delete&id=<?php echo $data['nik']; ?>" onClick="return confirm('Yakin akan menghapus penerima <?= $data['nama_alternatif']; ?>?')">Hapus</a>
+					<a href="index.php?aksi=delete&id=<?php echo $data['id']; ?>" onClick="return confirm('Yakin akan menghapus penerima <?= $data['nama_alternatif']; ?>?')">Hapus</a>
 				</td>
 			</tr>
 		<?php
@@ -476,7 +478,8 @@ function ubah($koneksi){
 		if(!empty($nama_alternatif) && !empty($nik)){
 			$sql_update = "UPDATE tb_alternatif SET nama_alternatif='$nama_alternatif',
 	            nik='$nik', kit1='$kit1', kit2='$kit2', kit3='$kit3', kit3='$kit3',
-				kit4='$kit4', kit5='$kit5', kit6='$kit6', kit7='$kit7', kit8='$kit8', kit9='$kit9',alamat='$alamat',kecamatan='$kecamatan',kelurahan='$kelurahan',periode='$periode' WHERE nik=$nik";
+				kit4='$kit4', kit5='$kit5', kit6='$kit6', kit7='$kit7', kit8='$kit8', kit9='$kit9',
+				alamat='$alamat',kecamatan='$kecamatan',kelurahan='$kelurahan',periode='$periode' WHERE nik=$nik";
 			$update = mysqli_query($koneksi, $sql_update);
 			if($update && isset($_GET['aksi'])){
 				if($_GET['aksi'] == 'update'){
@@ -496,6 +499,7 @@ function ubah($koneksi){
         $alamat = $_GET['alamat'];
         $kecamatan = $_GET['kecamatan'];
         $kelurahan = $_GET['kelurahan'];
+		$periode = $_GET['periode'];
 
 		?>
 			<a href="index.php"> &laquo; Home</a> | 
@@ -515,21 +519,21 @@ function ubah($koneksi){
 							<td>Periode </td>
 							<td> : <select name="periode">
                             <option disabled selected value="">-Pilih Periode-</option>
-                                    <option value="2019">2019</option>
-                                    <option value="2020">2020</option>
-                                    <option value="2021">2021</option>    
-                                    <option value="2022">2022</option>    
+                                    <option value="2019" <?php if($_GET["periode"]==2019){echo "selected";}?>>2019</option>
+                                    <option value="2020" <?php if($_GET["periode"]==2020){echo "selected";}?>>2020</option>
+                                    <option value="2021" <?php if($_GET["periode"]==2021){echo "selected";}?>>2021</option>    
+                                    <option value="2022" <?php if($_GET["periode"]==2022){echo "selected";}?>>2022</option>    
                             </select></td>
                             </td>
 						</tr>
-						<!-- <?= var_dump($alamat) ?> -->
+						<!-- var_dump($alamat) -->
 						<tr>
 							<td>NIK </td>
-							<td> : <input type="text" name="nik" value="<?php echo $_GET['nik'] ?>" required /></td>
+							<td> : <input type="text" name="nik" value="<?= $_GET['nik'] ?>" required /></td>
 						</tr>
 						</tr>
 							<td>Nama Calon Penerima </td> 
-							<td> : <input type="text" name="nama_alternatif" value="<?php echo $_GET['nama_alternatif'] ?>" required/></td>
+							<td> : <input type="text" name="nama_alternatif" value="<?= $_GET['nama_alternatif'] ?>" required/></td>
 						</tr>
                         <tr>
                             <td>Alamat </td>
@@ -537,20 +541,20 @@ function ubah($koneksi){
 						<tr>
                         <tr>
                             <td>Kecamatan </td>
-                            <td> : <input type="text" name="kecamatan" value="<?php echo $_GET['kecamatan'] ?>" required /></td>
+                            <td> : <input type="text" name="kecamatan" value="<?= $_GET['kecamatan'] ?>" required /></td>
 						<tr>
                         <tr>
                             <td>Kelurahan </td>
-                            <td> : <input type="text" name="kelurahan" value="<?php echo $_GET['kelurahan'] ?>" required /></td>
+                            <td> : <input type="text" name="kelurahan" value="<?= $_GET['kelurahan'] ?>" required /></td>
 						<tr>
 						<tr><td><h4>Kondisi Rumah</h4></td></tr>
                         <tr>
 							<td>Kondisi Atap</td> 
 							<td> : <select name="kit1">
                             <option disabled selected value="">-Pilih Kondisi Atap-</option>
-                                    <option value="3">Jeramik</option>
-                                    <option value="2">Genting Tanah</option>
-                                    <option value="1">Asbes</option>    
+                                    <option value="3" <?php if($_GET["kit1"]==3){echo "selected";}?>>Jeramik</option>
+                                    <option value="2" <?php if($_GET["kit1"]==2){echo "selected";}?>>Genting Tanah</option>
+                                    <option value="1" <?php if($_GET["kit1"]==1){echo "selected";}?>>Asbes</option>    
                             </select></td>
 						</tr>
 
@@ -558,9 +562,9 @@ function ubah($koneksi){
 							<td>Kondisi Dinding</td> 
 							<td> : <select  name="kit2">
                             <option disabled selected value="">-Pilih Kondisi Dinding-</option>
-                                    <option value="3">Bambu</option>
-                                    <option value="2">Kayu</option>
-                                    <option value="1">Tembok</option>    
+                                    <option value="3" <?php if($_GET["kit2"]==3){echo "selected";}?>>Bambu</option>
+                                    <option value="2" <?php if($_GET["kit2"]==2){echo "selected";}?>>Kayu</option>
+                                    <option value="1" <?php if($_GET["kit2"]==1){echo "selected";}?>>Tembok</option>    
                             </select></td>
 						</tr>
 
@@ -568,9 +572,9 @@ function ubah($koneksi){
 							<td>Kondisi Lantai</td> 
 							<td> : <select  name="kit3">
                             <option disabled selected value="">-Pilih Kondisi Lantai-</option>
-                                    <option value="3">Tanah</option>
-                                    <option value="2">Ubin</option>
-                                    <option value="1">Keramik</option>    
+                                    <option value="3" <?php if($_GET["kit3"]==3){echo "selected";}?>>Tanah</option>
+                                    <option value="2" <?php if($_GET["kit3"]==2){echo "selected";}?>>Ubin</option>
+                                    <option value="1" <?php if($_GET["kit3"]==1){echo "selected";}?>>Keramik</option>    
                             </select></td>
 						</tr>
                         
@@ -579,9 +583,9 @@ function ubah($koneksi){
 							<td>Sumber Air</td> 
 							<td> : <select  name="kit4">
                             <option disabled selected value="">-Pilih Sumber AIR-</option>
-                                    <option value="3">Air Sungai</option>
-                                    <option value="2">Sumur</option>
-                                    <option value="1">Air PDAM</option>    
+                                    <option value="3" <?php if($_GET["kit4"]==3){echo "selected";}?>>Air Sungai</option>
+                                    <option value="2" <?php if($_GET["kit4"]==2){echo "selected";}?>>Sumur</option>
+                                    <option value="1" <?php if($_GET["kit4"]==1){echo "selected";}?>>Air PDAM</option>    
                             </select></td>
 						</tr>
 
@@ -589,9 +593,9 @@ function ubah($koneksi){
 							<td>Fasilitas BAB</td> 
 							<td> : <select  name="kit5">
                             <option disabled selected value="">-Pilih Fasilitas BAB-</option>
-                                    <option value="3">Tidak Ada</option>
-                                    <option value="2">Umum</option>
-                                    <option value="1">Sendiri</option>    
+                                    <option value="3" <?php if($_GET["kit5"]==3){echo "selected";}?>>Tidak Ada</option>
+                                    <option value="2" <?php if($_GET["kit5"]==2){echo "selected";}?>>Umum</option>
+                                    <option value="1" <?php if($_GET["kit5"]==1){echo "selected";}?>>Sendiri</option>    
                             </select></td>
 						</tr>
 
@@ -599,9 +603,9 @@ function ubah($koneksi){
 							<td>Bahan Bakar Memasak</td> 
 							<td> : <select  name="kit6">
                             <option disabled selected value="">-Pilih Bahan Bakar Memasak-</option>
-                                    <option value="3">Kayu Bakar</option>
-                                    <option value="2">Minyak Tanah</option>
-                                    <option value="1">Kompor Gas</option>    
+                                    <option value="3" <?php if($_GET["kit6"]==3){echo "selected";}?>>Kayu Bakar</option>
+                                    <option value="2" <?php if($_GET["kit6"]==2){echo "selected";}?>>Minyak Tanah</option>
+                                    <option value="1" <?php if($_GET["kit6"]==1){echo "selected";}?>>Kompor Gas</option>    
                             </select></td>
 						</tr>
 
@@ -610,9 +614,9 @@ function ubah($koneksi){
 							<td>Kendaraan</td> 
 							<td> : <select  name="kit7">
                             <option disabled selected value="">-Pilih Kendaraan-</option>
-                                    <option value="3">Tidak Punya</option>
-                                    <option value="2">Sepeda Ontel</option>
-                                    <option value="1">Motor/Kapal Motor</option>    
+                                    <option value="3" <?php if($_GET["kit7"]==3){echo "selected";}?>>Tidak Punya</option>
+                                    <option value="2" <?php if($_GET["kit7"]==2){echo "selected";}?>>Sepeda Ontel</option>
+                                    <option value="1" <?php if($_GET["kit7"]==1){echo "selected";}?>>Motor/Kapal Motor</option>    
                             </select></td>
 						</tr>
 
@@ -620,9 +624,9 @@ function ubah($koneksi){
 							<td>Hewan Ternak</td> 
 							<td> : <select  name="kit8">
                             <option disabled selected value="">-Pilih Kendaraan Air-</option>
-                                    <option value="3">Tidak Punya</option>
-                                    <option value="2">Kambing</option>
-                                    <option value="1">Sapi</option>    
+                                    <option value="3" <?php if($_GET["kit8"]==3){echo "selected";}?>>Tidak Punya</option>
+                                    <option value="2" <?php if($_GET["kit8"]==2){echo "selected";}?>>Kambing</option>
+                                    <option value="1" <?php if($_GET["kit8"]==1){echo "selected";}?>>Sapi</option>    
                             </select></td>
 						</tr>
 
@@ -630,9 +634,9 @@ function ubah($koneksi){
 							<td>Elektronik</td> 
 							<td> : <select  name="kit9">
                             <option disabled selected value="">-Pilih Elektronik-</option>
-                                    <option value="3">Tidak Punya</option>
-                                    <option value="2">TV/HP</option>
-                                    <option value="1">Kulkas</option>    
+                                    <option value="3"  <?php if($_GET["kit9"]==3){echo "selected";}?>>Tidak Punya</option>
+                                    <option value="2"  <?php if($_GET["kit9"]==2){echo "selected";}?>>TV/HP</option>
+                                    <option value="1"  <?php if($_GET["kit9"]==1){echo "selected";}?>>Kulkas</option>    
                             </select></td>
 						</tr>
 						</tr>
