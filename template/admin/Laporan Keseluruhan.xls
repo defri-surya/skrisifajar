@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title><br />
+<b>Warning</b>:  Undefined variable $title in <b>C:\My_Project\template\admin\hasil\lap_keseluruhan\export_excel.php</b> on line <b>13</b><br />
+</title>
+        <link href="http://localhost:/template/admin/_assets/dist/css/styles.css" rel="stylesheet" />
+        <link href="http://localhost:/template/admin/_assets/dataTables/Responsive-2.2.6/css/responsive.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <link href="http://localhost:/template/admin/_assets/dataTables/datatables.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+        <!-- ikon -->
+        <link rel="icon" href="http://localhost:/template/admin/_assets/Bantul.png" type="image/gif" sizes="16x16">
+
+    </head>
+    <body class="sb-nav-fixed bg-light">
+    
+    <h3>Bantuan Rumah Tidak Layak Huni</h3>
+    <p>Periode : 
+        -    </p>
+
+    <table border="1" cellpadding="4" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>NIK</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Periode</th>
+                <th>Kondisi Atap</th>
+                <th>Kondisi Dinding</th>
+                <th>Kondisi Lantai</th>
+                <th>Sumber Air</th>
+                <th>Bahan Bakar Masak</th>
+                <th>Fasilitas BAB</th>
+                <th>Kendaraan</th>
+                <th>Elektronik</th>
+                <th>Kendaraan Air</th>	
+                <th>Ranking</th>
+            </tr>
+        </thead>
+        <tbody>
+                                    <tr>
+                            <td>1.</td>
+                            <td>1111111</td>
+                            <td>cccccccc</td>
+                            <td>dddddd</td>
+                            <td>2020</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>1</td>
+                        </tr>
+                                            <tr>
+                            <td>2.</td>
+                            <td>1234567</td>
+                            <td>fdfdfdf</td>
+                            <td>asasas</td>
+                            <td>2019</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                                            <tr>
+                            <td>3.</td>
+                            <td>252523552</td>
+                            <td>yuyuyun</td>
+                            <td><br /><b>Warning</b>:  Undefined array key </td>
+                            <td>0000</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>3</td>
+                        </tr>
+                                            <tr>
+                            <td>4.</td>
+                            <td>345678</td>
+                            <td>qwqwqwq</td>
+                            <td>ererer</td>
+                            <td>2020</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>4</td>
+                        </tr>
+                                            <tr>
+                            <td>5.</td>
+                            <td>3333333</td>
+                            <td>zzzzzzzz</td>
+                            <td>tttttttttt</td>
+                            <td>2019</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>5</td>
+                        </tr>
+                                            <tr>
+                            <td>6.</td>
+                            <td>456789</td>
+                            <td>xcxcxcxc</td>
+                            <td>bvbvbv</td>
+                            <td>2020</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>6</td>
+                        </tr>
+                                            <tr>
+                            <td>7.</td>
+                            <td>234567</td>
+                            <td>hjhjhjhj</td>
+                            <td>gfgfgfg</td>
+                            <td>2020</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>7</td>
+                        </tr>
+                            </tbody>
+    </table>
+        </body>
+</html>
