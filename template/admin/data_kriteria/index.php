@@ -1,4 +1,4 @@
-<?php $title = "Entri Data User";
+<?php $title = "Data Kriteria";
 include_once('../_header.php');
 
 ?>
@@ -16,7 +16,7 @@ include_once('../_header.php');
                     <div class="container-fluid">
                         <ol>
                             <li class="breadcrumb-item">
-                               <h3> Entri Data Kriteria</h3>
+                               <h3> Data Kriteria</h3>
                             </li>
                         </ol>
 
@@ -40,6 +40,7 @@ function tampil_data($koneksi){
 			echo "<th>No</th>
 				<th>Kode</th>
 				<th>Nama Kriteria</th>
+				<th>Aksi</th>
 				";	
 			echo "</tr>";
 		echo "</thead>";
@@ -50,7 +51,9 @@ function tampil_data($koneksi){
 				<td><?= $nomor++; ?>.</td>
 				<td><?php echo $data['kode']; ?></td>
 				<td><?php echo $data['nama_kriteria']; ?></td>
-				
+				<td>
+					<a href="index.php?aksi=update&id=<?php echo $data['id_kriteria']; ?>&kode=<?php echo $data['kode']; ?>&nama_kriteria=<?php echo $data['nama_kriteria']; ?>">Edit</a>
+				</td>
 			</tr>
 		<?php
 	}
@@ -63,8 +66,72 @@ function tampil_data($koneksi){
 }
 // --- Tutup Fungsi Baca Data (Read)
 
-// ===================================================================
+// --- Fungsi Ubah Data (Update)
+function ubah($koneksi){
 
+	// ubah data
+	if(isset($_POST['btn_ubah'])){
+		$kode = $_POST['kode'];
+		$nama_kriteria = $_POST['nama_kriteria'];
+		
+		if(!empty($nama_kriteria) && !empty($kode)){
+			$sql_update = "UPDATE tb_kriteria SET nama_kriteria='$nama_kriteria',
+	            kode='$kode' WHERE kode=$kode";
+			$update = mysqli_query($koneksi, $sql_update);
+			if($update && isset($_GET['aksi'])){
+				if($_GET['aksi'] == 'update'){
+					echo "<div class='alert alert-info'>Data Berhasil Diubah</div>";
+					echo "<meta http-equiv='refresh' content='1;url=index.php'>";
+				}
+			}
+		} else {
+			$pesan = "Data tidak lengkap!";
+		}
+	}
+	
+	// tampilkan form ubah
+	if(isset($_GET['id'])){
+		$kode = $_GET['kode'];
+		$nama_kriteria = $_GET['nama_kriteria'];
+		?>
+			<a href="index.php"> &laquo; Home</a> | 
+			<a href="index.php?aksi=create"> (+) Tambah Data</a>
+			<hr>
+			<h3>Ubah Data</h3>
+			<form action="" method="POST">
+			<fieldset>
+				<div class="table-responsive">
+					<table class="table table-responsive-sm table-hover" border="0">
+						<tr>
+							<td>	
+								<input type="hidden" name="id" value="<?php echo $_GET['id'] ?>"/>
+							</td>
+						</tr>
+						<tr>
+							<td>Kode Kriteria </td>
+							<td> : <input type="text" name="kode" value="<?= $_GET['kode'] ?>" required /></td>
+						</tr>
+						<!-- var_dump($alamat) -->
+						<tr>
+							<td>Nama Kriteria </td>
+							<td> : <input type="text" name="nama_kriteria" value="<?= $_GET['nama_kriteria'] ?>" required /></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<label class="ml-2">
+									<input type="submit" name="btn_ubah" value="Simpan Perubahan"/>
+								</label>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<p><?php echo isset($pesan) ? $pesan : "" ?></p>
+			</fieldset>
+			</form>
+<?php
+	}
+}
 // --- Program Utama
 if (isset($_GET['aksi'])){
 	switch($_GET['aksi']){
@@ -102,13 +169,12 @@ if (isset($_GET['aksi'])){
 
 <?php include_once('../_footer.php'); ?>
 <script type="text/javascript" charset="utf8">
-            $(document).ready( function () {
-                $('#kriteria').DataTable(
-                    {
-                        "pageLength": 4,
-                        responsive: true,
-                        select: true
-                    }
-                    );
-            } );
-        </script>
+	$(document).ready( function () {
+		$('#kriteria').DataTable(
+			{
+				"pageLength": 4,
+				responsive: true,
+				select: true
+			});
+	});
+</script>

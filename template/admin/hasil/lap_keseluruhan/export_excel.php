@@ -104,11 +104,11 @@ if (isset($_SESSION['admin'])) { ?>
                 <th>Kondisi Dinding</th>
                 <th>Kondisi Lantai</th>
                 <th>Sumber Air</th>
-                <th>Bahan Bakar Masak</th>
                 <th>Fasilitas BAB</th>
+                <th>Bahan Bakar Masak</th>
                 <th>Kendaraan</th>
-                <th>Elektronik</th>
-                <th>Kendaraan Air</th>	
+                <th>Hewan Ternak</th>
+                <th>Elektronik</th>	
                 <th>Ranking</th>
             </tr>
         </thead>

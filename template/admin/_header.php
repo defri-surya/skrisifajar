@@ -53,7 +53,7 @@ if (isset($_SESSION['admin'])) { ?>
                             </a>
                             <a class="nav-link bg-danger text-white" href="<?= base_url('admin/data_kriteria');?>">
                                 <div class="sb-nav-link-icon"></div>
-                                Entri Kriteria
+                                Data Kriteria
                             </a>
                             <a class="nav-link bg-danger text-white" href="<?= base_url('admin/data_pegawai');?>">
                                 <div class="sb-nav-link-icon"></div>

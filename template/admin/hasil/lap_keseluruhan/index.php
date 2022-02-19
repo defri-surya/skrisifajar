@@ -223,8 +223,8 @@ include_once('../../_header.php');
 			<th>Kondisi Dinding</th>
 			<th>Kondisi Lantai</th>
 			<th>Sumber Air</th>
-			<th>Bahan Bakar Masak</th>
 			<th>Fasilitas BAB</th>
+			<th>Bahan Bakar Masak</th>
 			<th>Kendaraan</th>
 			<th>Hewan Ternak</th>
 			<th>Elektronik</th>	
