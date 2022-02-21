@@ -540,6 +540,7 @@ function tampil_data($koneksi){
 				<th>NIK</th>
 				<th>Nama</th>
                 <th>Alamat</th>
+                <th>Periode</th>
                 <th>Kecamatan</th>
                 <th>Kelurahan</th>
                 <th>Kondisi Rumah</th>
@@ -557,6 +558,7 @@ function tampil_data($koneksi){
 				<td><?php echo $data['nik']; ?></td>
 				<td><?php echo $data['nama_alternatif']; ?></td>
                 <td><?php echo $data['alamat']; ?></td>
+                <td><?php echo $data['periode']; ?></td>
                 <td>
 					<?php
 						if($data['kecamatan_id']==1){

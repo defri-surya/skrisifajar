@@ -49,7 +49,7 @@ if (isset($_SESSION['admin'])) { ?>
                             <!-- <div class="sb-sidenav-menu-heading">Navigasi Utama</div> -->
                             <a class="nav-link bg-danger text-white" href="<?= base_url('admin/data_alternative');?>">
                                 <div class="sb-nav-link-icon"></div>
-                                Entri Alternative
+                                Data Penerima Bantuan
                             </a>
                             <a class="nav-link bg-danger text-white" href="<?= base_url('admin/data_kriteria');?>">
                                 <div class="sb-nav-link-icon"></div>
@@ -57,7 +57,7 @@ if (isset($_SESSION['admin'])) { ?>
                             </a>
                             <a class="nav-link bg-danger text-white" href="<?= base_url('admin/data_pegawai');?>">
                                 <div class="sb-nav-link-icon"></div>
-                                Entri Pegawai
+                                Data Pegawai
                             </a>
                            
                             <a class="nav-link collapsed bg-info text-white" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">

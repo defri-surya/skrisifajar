@@ -33,22 +33,22 @@ if (isset($_SESSION['admin'])) { ?>
             $sqlcari = mysqli_query($koneksi,"SELECT * FROM tb_alternatif WHERE periode LIKE '%$cariperiode%' ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC");
         }
         if ($carikecamatan AND !$cariperiode AND !$carikelurahan) {
-            $sqlcari = mysqli_query($koneksi,"SELECT * FROM tb_alternatif WHERE kecamatan LIKE '%$carikecamatan%' ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC");
+            $sqlcari = mysqli_query($koneksi,"SELECT * FROM tb_alternatif WHERE kecamatan_id LIKE '%$carikecamatan%' ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC");
         }
         if ($carikelurahan AND !$cariperiode AND !$carikecamatan) {
-            $sqlcari = mysqli_query($koneksi,"SELECT * FROM tb_alternatif WHERE kelurahan LIKE '%$carikelurahan%' ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC");
+            $sqlcari = mysqli_query($koneksi,"SELECT * FROM tb_alternatif WHERE kelurahan_id LIKE '%$carikelurahan%' ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC");
         }
         if ($cariperiode AND $carikecamatan AND $carikelurahan) {
-            $sqlcari = mysqli_query($koneksi,"SELECT * FROM tb_alternatif WHERE periode LIKE '%$cariperiode%' AND kecamatan LIKE '%$carikecamatan%' AND kelurahan LIKE '%$carikelurahan%' ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC");
+            $sqlcari = mysqli_query($koneksi,"SELECT * FROM tb_alternatif WHERE periode LIKE '%$cariperiode%' AND kecamatan_id LIKE '%$carikecamatan%' AND kelurahan_id LIKE '%$carikelurahan%' ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC");
         }
         if ($cariperiode AND $carikecamatan AND !$carikelurahan) {
-            $sqlcari = mysqli_query($koneksi,"SELECT * FROM tb_alternatif WHERE periode LIKE '%$cariperiode%' AND kecamatan LIKE '%$carikecamatan%' ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC");
+            $sqlcari = mysqli_query($koneksi,"SELECT * FROM tb_alternatif WHERE periode LIKE '%$cariperiode%' AND kecamatan_id LIKE '%$carikecamatan%' ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC");
         }
         if ($cariperiode AND !$carikecamatan AND $carikelurahan) {
-            $sqlcari = mysqli_query($koneksi,"SELECT * FROM tb_alternatif WHERE periode LIKE '%$cariperiode%' AND kelurahan LIKE '%$carikelurahan%' ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC");
+            $sqlcari = mysqli_query($koneksi,"SELECT * FROM tb_alternatif WHERE periode LIKE '%$cariperiode%' AND kelurahan_id LIKE '%$carikelurahan%' ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC");
         }
         if (!$cariperiode AND $carikecamatan AND $carikelurahan) {
-            $sqlcari = mysqli_query($koneksi,"SELECT * FROM tb_alternatif WHERE kecamatan LIKE '%$carikecamatan%' AND kelurahan LIKE '%$carikelurahan%' ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC");
+            $sqlcari = mysqli_query($koneksi,"SELECT * FROM tb_alternatif WHERE kecamatan_id LIKE '%$carikecamatan%' AND kelurahan_id LIKE '%$carikelurahan%' ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC");
         }
         if (!$cariperiode AND !$carikecamatan AND !$carikelurahan) {
             $sqlcari = mysqli_query($koneksi,"SELECT * FROM tb_alternatif ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC");
@@ -66,26 +66,6 @@ if (isset($_SESSION['admin'])) { ?>
         }
         if (!$cariperiode) {
             echo "<strong>Semua Periode</strong>";
-        }
-        ?>
-    </p>
-    <p>Kecamatan : 
-        <?php
-        if ($carikecamatan) {
-            echo "<strong>$carikecamatan</strong>";
-        }
-        if (!$carikecamatan) {
-            echo "<strong>Semua Kecamatan</strong>";
-        }
-        ?>
-    </p>
-    <p>Kelurahan : 
-        <?php
-        if ($carikelurahan) {
-            echo "<strong>$carikelurahan</strong>";
-        }
-        if (!$carikelurahan) {
-            echo "<strong>Semua Kelurahan</strong>";
         }
         ?>
     </p>
@@ -110,6 +90,7 @@ if (isset($_SESSION['admin'])) { ?>
                 <th>Hewan Ternak</th>
                 <th>Elektronik</th>	
                 <th>Ranking</th>
+                <th>Keterangan</th>
             </tr>
         </thead>
         <tbody>
@@ -121,8 +102,200 @@ if (isset($_SESSION['admin'])) { ?>
                             <td><?php echo $data['nik']; ?></td>
                             <td><?php echo $data['nama_alternatif']; ?></td>
                             <td><?php echo $data['alamat']; ?></td>
-                            <td><?php echo $data['kecamatan']; ?></td>
-                            <td><?php echo $data['kelurahan']; ?></td>
+                            <td>
+                                <?php
+                                    if($data['kecamatan_id']==1){
+                                        echo "Kecamatan Srandakan";
+                                    } elseif ($data['kecamatan_id']==2) {
+                                        echo "Kecamatan Sanden";
+                                    } elseif ($data['kecamatan_id']==3) {
+                                        echo "Kecamatan Pundong";
+                                    } elseif ($data['kecamatan_id']==4) {
+                                        echo "Kecamatan Bambanglipuro";
+                                    } elseif ($data['kecamatan_id']==5) {
+                                        echo "Kecamatan Pandak";
+                                    } elseif ($data['kecamatan_id']==6) {
+                                        echo "Kecamatan Bantul";
+                                    } elseif ($data['kecamatan_id']==7) {
+                                        echo "Kecamatan Imogiri";
+                                    } elseif ($data['kecamatan_id']==8) {
+                                        echo "Kecamatan Jetis";
+                                    } elseif ($data['kecamatan_id']==9) {
+                                        echo "Kecamatan Dlingo";
+                                    } elseif ($data['kecamatan_id']==10) {
+                                        echo "Kecamatan Pleret";
+                                    } elseif ($data['kecamatan_id']==11) {
+                                        echo "Kecamatan Piyungan";
+                                    } elseif ($data['kecamatan_id']==12) {
+                                        echo "Kecamatan Banguntapan";
+                                    } elseif ($data['kecamatan_id']==13) {
+                                        echo "Kecamatan Sewon";
+                                    } elseif ($data['kecamatan_id']==14) {
+                                        echo "Kecamatan Kasihan";
+                                    } elseif ($data['kecamatan_id']==15) {
+                                        echo "Kecamatan Pajangan";
+                                    } elseif ($data['kecamatan_id']==16) {
+                                        echo "Kecamatan Sedayu";
+                                    } elseif ($data['kecamatan_id']==17) {
+                                        echo "Kecamatan Kretek";
+                                    }
+                                ?>
+                            </td>
+                            <td>
+                                <?php
+                                if($data['kelurahan_id']==1){
+                                    echo "Kelurahan Trimurti";
+                                } elseif ($data['kelurahan_id']==2) {
+                                    echo "Kelurahan Poncosari";
+                                } elseif ($data['kelurahan_id']==3) {
+                                    echo "Kelurahan Gadingan";
+                                } elseif ($data['kelurahan_id']==4) {
+                                    echo "Kelurahan Gadingharjo";
+                                } elseif ($data['kelurahan_id']==5) {
+                                    echo "Kelurahan Martigading";
+                                } elseif ($data['kelurahan_id']==6) {
+                                    echo "Kelurahan Srigading";
+                                } elseif ($data['kelurahan_id']==7) {
+                                    echo "Kelurahan Panjangrejo";
+                                } elseif ($data['kelurahan_id']==8) {
+                                    echo "Kelurahan Bangunharjo";
+                                } elseif ($data['kelurahan_id']==9) {
+                                    echo "Kelurahan Srihardono";
+                                } elseif ($data['kelurahan_id']==10) {
+                                    echo "Kelurahan Mulyodadi";
+                                } elseif ($data['kelurahan_id']==11) {
+                                    echo "Kelurahan Sidomulyo";
+                                } elseif ($data['kelurahan_id']==12) {
+                                    echo "Kelurahan Sumbermulyo";
+                                } elseif ($data['kelurahan_id']==13) {
+                                    echo "Kelurahan Caturharjo";
+                                } elseif ($data['kelurahan_id']==14) {
+                                    echo "Kelurahan Gilangharjo";
+                                } elseif ($data['kelurahan_id']==15) {
+                                    echo "Kelurahan Triharjo";
+                                } elseif ($data['kelurahan_id']==16) {
+                                    echo "Kelurahan Wijirejo";
+                                } elseif ($data['kelurahan_id']==17) {
+                                    echo "Kelurahan Bantul";
+                                } elseif ($data['kelurahan_id']==18) {
+                                    echo "Kelurahan Palbapang";
+                                } elseif ($data['kelurahan_id']==19) {
+                                    echo "Kelurahan Ringinharjo";
+                                } elseif ($data['kelurahan_id']==20) {
+                                    echo "Kelurahan Sabdodadi";
+                                } elseif ($data['kelurahan_id']==21) {
+                                    echo "Kelurahan Trirenggo";
+                                } elseif ($data['kelurahan_id']==22) {
+                                    echo "Kelurahan Girirejo";
+                                } elseif ($data['kelurahan_id']==23) {
+                                    echo "Kelurahan Imogiri";
+                                } elseif ($data['kelurahan_id']==24) {
+                                    echo "Kelurahan Karangtalun";
+                                } elseif ($data['kelurahan_id']==25) {
+                                    echo "Kelurahan Karangtengah";
+                                } elseif ($data['kelurahan_id']==26) {
+                                    echo "Kelurahan Kebonagung";
+                                } elseif ($data['kelurahan_id']==27) {
+                                    echo "Kelurahan Selopamioro";
+                                } elseif ($data['kelurahan_id']==28) {
+                                    echo "Kelurahan Sriharjo";
+                                } elseif ($data['kelurahan_id']==29) {
+                                    echo "Kelurahan Wukirsari";
+                                } elseif ($data['kelurahan_id']==30) {
+                                    echo "Kelurahan Canden";
+                                } elseif ($data['kelurahan_id']==31) {
+                                    echo "Kelurahan Patalan";
+                                } elseif ($data['kelurahan_id']==32) {
+                                    echo "Kelurahan Sumberagung";
+                                } elseif ($data['kelurahan_id']==33) {
+                                    echo "Kelurahan Trimulyo";
+                                } elseif ($data['kelurahan_id']==34) {
+                                    echo "Kelurahan Dlingo";
+                                } elseif ($data['kelurahan_id']==35) {
+                                    echo "Kelurahan Jatimulyo";
+                                } elseif ($data['kelurahan_id']==36) {
+                                    echo "Kelurahan Mangunan";
+                                } elseif ($data['kelurahan_id']==37) {
+                                    echo "Kelurahan Muntuk";
+                                } elseif ($data['kelurahan_id']==38) {
+                                    echo "Kelurahan Temuwuh";
+                                } elseif ($data['kelurahan_id']==39) {
+                                    echo "Kelurahan Terong";
+                                } elseif ($data['kelurahan_id']==40) {
+                                    echo "Kelurahan Bawuran";
+                                } elseif ($data['kelurahan_id']==41) {
+                                    echo "Kelurahan Pleret";
+                                } elseif ($data['kelurahan_id']==42) {
+                                    echo "Kelurahan Segoroyoso";
+                                } elseif ($data['kelurahan_id']==43) {
+                                    echo "Kelurahan Wonokromo";
+                                } elseif ($data['kelurahan_id']==44) {
+                                    echo "Kelurahan Wonolelo";
+                                } elseif ($data['kelurahan_id']==45) {
+                                    echo "Kelurahan Srimulyo";
+                                } elseif ($data['kelurahan_id']==46) {
+                                    echo "Kelurahan Sitimulyo";
+                                } elseif ($data['kelurahan_id']==47) {
+                                    echo "Kelurahan Srimartani";
+                                } elseif ($data['kelurahan_id']==48) {
+                                    echo "Kelurahan Banguntapan";
+                                } elseif ($data['kelurahan_id']==49) {
+                                    echo "Kelurahan Baturetno";
+                                } elseif ($data['kelurahan_id']==50) {
+                                    echo "Kelurahan Jagalan";
+                                } elseif ($data['kelurahan_id']==51) {
+                                    echo "Kelurahan Jambidan";
+                                } elseif ($data['kelurahan_id']==52) {
+                                    echo "Kelurahan Potorono";
+                                } elseif ($data['kelurahan_id']==53) {
+                                    echo "Kelurahan Singosaren";
+                                } elseif ($data['kelurahan_id']==54) {
+                                    echo "Kelurahan Tamanan";
+                                } elseif ($data['kelurahan_id']==55) {
+                                    echo "Kelurahan Wirokerten";
+                                } elseif ($data['kelurahan_id']==56) {
+                                    echo "Kelurahan Bangunharjo";
+                                } elseif ($data['kelurahan_id']==57) {
+                                    echo "Kelurahan Panggungharjo";
+                                } elseif ($data['kelurahan_id']==58) {
+                                    echo "Kelurahan Pendowoharjo";
+                                } elseif ($data['kelurahan_id']==59) {
+                                    echo "Kelurahan Timbulharjo";
+                                } elseif ($data['kelurahan_id']==60) {
+                                    echo "Kelurahan Bangunjiwo";
+                                } elseif ($data['kelurahan_id']==61) {
+                                    echo "Kelurahan Ngestiharjo";
+                                } elseif ($data['kelurahan_id']==62) {
+                                    echo "Kelurahan Tamantirto";
+                                } elseif ($data['kelurahan_id']==63) {
+                                    echo "Kelurahan Tirtonirmolo";
+                                } elseif ($data['kelurahan_id']==64) {
+                                    echo "Kelurahan Guwosari";
+                                } elseif ($data['kelurahan_id']==65) {
+                                    echo "Kelurahan Sendangsari";
+                                } elseif ($data['kelurahan_id']==66) {
+                                    echo "Kelurahan Triwidadi";
+                                } elseif ($data['kelurahan_id']==67) {
+                                    echo "Kelurahan Argodadi";
+                                } elseif ($data['kelurahan_id']==68) {
+                                    echo "Kelurahan Argorejo";
+                                } elseif ($data['kelurahan_id']==69) {
+                                    echo "Kelurahan Argosari";
+                                } elseif ($data['kelurahan_id']==70) {
+                                    echo "Kelurahan Argomulyo";
+                                } elseif ($data['kelurahan_id']==71) {
+                                    echo "Kelurahan Donotirto";
+                                } elseif ($data['kelurahan_id']==72) {
+                                    echo "Kelurahan Prangtritis";
+                                } elseif ($data['kelurahan_id']==73) {
+                                    echo "Kelurahan Tirtohargo";
+                                } elseif ($data['kelurahan_id']==74) {
+                                    echo "Kelurahan Tirtomulyo";
+                                } elseif ($data['kelurahan_id']==75) {
+                                    echo "Kelurahan Tirtosari";
+                                } 
+                                ?>
+                            </td>
                             <td><?php echo $data['periode']; ?></td>
                             <td>
                                 <?php
@@ -224,6 +397,15 @@ if (isset($_SESSION['admin'])) { ?>
                                 ?>
                             </td>
                             <td><?= $ranking++ ?></td>
+                            <td>
+                                <?php
+                                    if ($ranking <= 11) {
+                                        echo "Menerima Bantuan";
+                                    } else {
+                                        echo "Tidak Menerima Bantuan";
+                                    }
+                                ?>
+                            </td>
                         </tr>
                     <?php
                 }

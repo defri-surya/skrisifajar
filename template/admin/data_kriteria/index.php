@@ -52,7 +52,7 @@ function tampil_data($koneksi){
 				<td><?php echo $data['kode']; ?></td>
 				<td><?php echo $data['nama_kriteria']; ?></td>
 				<td>
-					<a href="index.php?aksi=update&id=<?php echo $data['id_kriteria']; ?>&kode=<?php echo $data['kode']; ?>&nama_kriteria=<?php echo $data['nama_kriteria']; ?>">Edit</a>
+				<a href="index.php?aksi=update&id=<?php echo $data['id_namakriteria']; ?>&nama_kriteria=<?php echo $data['nama_kriteria']; ?>">Edit</a>
 				</td>
 			</tr>
 		<?php
@@ -71,12 +71,13 @@ function ubah($koneksi){
 
 	// ubah data
 	if(isset($_POST['btn_ubah'])){
-		$kode = $_POST['kode'];
+		$id_namakriteria = $_POST['id_namakriteria'];
 		$nama_kriteria = $_POST['nama_kriteria'];
+
 		
-		if(!empty($nama_kriteria) && !empty($kode)){
-			$sql_update = "UPDATE tb_kriteria SET nama_kriteria='$nama_kriteria',
-	            kode='$kode' WHERE kode=$kode";
+		if(!empty($nama_kriteria)){
+			$sql_update = "UPDATE tb_namakriteria SET nama_kriteria='$nama_kriteria'
+	           WHERE id_namakriteria=$id_namakriteria";
 			$update = mysqli_query($koneksi, $sql_update);
 			if($update && isset($_GET['aksi'])){
 				if($_GET['aksi'] == 'update'){
@@ -91,8 +92,7 @@ function ubah($koneksi){
 	
 	// tampilkan form ubah
 	if(isset($_GET['id'])){
-		$kode = $_GET['kode'];
-		$nama_kriteria = $_GET['nama_kriteria'];
+
 		?>
 			<a href="index.php"> &laquo; Home</a> | 
 			<a href="index.php?aksi=create"> (+) Tambah Data</a>
@@ -104,19 +104,13 @@ function ubah($koneksi){
 					<table class="table table-responsive-sm table-hover" border="0">
 						<tr>
 							<td>	
-								<input type="hidden" name="id" value="<?php echo $_GET['id'] ?>"/>
+								<input type="hidden" name="id_namakriteria" value="<?php echo $_GET['id'] ?>"/>
 							</td>
 						</tr>
 						<tr>
-							<td>Kode Kriteria </td>
-							<td> : <input type="text" name="kode" value="<?= $_GET['kode'] ?>" required /></td>
+							<td>Nama </td>
+							<td> : <input type="text" name="nama_kriteria" value="<?php echo $_GET['nama_kriteria'] ?>" required /></td>
 						</tr>
-						<!-- var_dump($alamat) -->
-						<tr>
-							<td>Nama Kriteria </td>
-							<td> : <input type="text" name="nama_kriteria" value="<?= $_GET['nama_kriteria'] ?>" required /></td>
-						</tr>
-						<tr>
 							<td></td>
 							<td>
 								<label class="ml-2">
@@ -124,14 +118,24 @@ function ubah($koneksi){
 								</label>
 							</td>
 						</tr>
+
 					</table>
+					<br>
 				</div>
+
 				<p><?php echo isset($pesan) ? $pesan : "" ?></p>
 			</fieldset>
-			</form>
-<?php
+		</form>
+
+		<?php
+// 		echo "<pre>";
+// 		print_r($level);
+//		echo "</pre>";
 	}
+	
 }
+// --- Tutup Fungsi Update
+
 // --- Program Utama
 if (isset($_GET['aksi'])){
 	switch($_GET['aksi']){

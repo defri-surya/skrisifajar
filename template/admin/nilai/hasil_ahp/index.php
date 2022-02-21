@@ -406,83 +406,118 @@ include_once('../../_header.php');
 // ===================================================================
 
 ?>
-
+<?php
+	
+	// Fungsi Search Data
+	// if(isset($_GET['cariperiode'])){
+	// 	$cari = $_GET['cariperiode'];
+	// }
+?> 
 <div class="container-fluid">
 		<li class="breadcrumb-item">
 			<h3>Hasil SAW</h3>
 		</li>
-
+		<form action="index.php" method="GET">
+				<div class="table-responsive">
+					<table class="table table-responsive-sm table-hover" border="0">
+						<tr>
+							<td>Periode</td> 
+							<td> : 
+						        <select name="cariperiode">
+						        	<option value="">-Pilih Periode-</option>
+									<?php
+										$sqlkec = mysqli_query($koneksi,"SELECT DISTINCT periode FROM tb_alternatif");
+										foreach ($sqlkec as $data) {
+											echo "<option value='$data[periode]'>$data[periode]</option>";
+										}
+									?>
+                            </select>
+					        </td>
+					    </tr>
+						<tr>
+							<td></td>
+							<td>
+								<label class="ml-2"></label>
+								<input type="submit" value="Cari"/>
+							</td>
+						</tr>
+					</table>
+				</div>
+		</form>
+		<?php
+		$nomor = 1;
+	$ranking = 1;
+	
+		echo "<fieldset>";
+		echo "<div class='table-responsive'>";
+		echo "<table class='table table-responsive-sm table-bordered table-hover' id='user' border='1' cellpadding='10'>";
+		echo "<thead>";
+			echo "<tr>";
+			echo "
+			<th>No</th>
+			<th>NIK</th>
+			<th>Nama</th>
+			<th>Periode</th>
+			<th>Kondisi Atap</th>
+			<th>Kondisi Dinding</th>
+			<th>Kondisi Lantai</th>
+			<th>Sumber Air</th>
+			<th>Fasilitas BAB</th>
+			<th>Bahan Bakar Masak</th>
+			<th>Kendaraan</th>
+			<th>Hewan Ternak</th>
+			<th>Elektronik</th>	
+			<th>Ranking</th>";	
+			echo "</tr>";
+		echo "</thead>";
+		echo "<tbody>";
+	if(isset($_GET['cariperiode'])){
+		$cariperiode = $_GET['cariperiode'];
+		$sqlcari = mysqli_query($koneksi,"SELECT * FROM tb_alternatif WHERE periode LIKE '%".$cariperiode."%' ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC") or die (mysqli_error($koneksi));
+		$no = 1;
+		// $sqlcari = mysqli_query($koneksi,"SELECT * FROM tb_alternatif") or die (mysqli_error($koneksi));
+		while($data = mysqli_fetch_array($sqlcari)){
+			?>
+				<tr>
+					<td><?= $no++; ?>.</td>
+					<td><?php echo $data['nik']; ?></td>
+					<td><?php echo $data['nama_alternatif']; ?></td>
+					<td><?php echo $data['periode']; ?></td>
+					<td><?= $data["kit1"] ?></td>
+					<td><?= $data["kit2"] ?></td>
+					<td><?= $data["kit3"] ?></td>
+					<td><?= $data["kit4"] ?></td>
+					<td><?= $data["kit5"] ?></td>
+					<td><?= $data["kit6"] ?></td>
+					<td><?= $data["kit7"] ?></td>
+					<td><?= $data["kit8"] ?></td>
+					<td><?= $data["kit9"] ?></td>
+					<td><?= $ranking++ ?></td>
+				</tr>
+			<?php
+		}
+		echo "</tbody>";
+		echo "</table>";
+		?>
+		<?php
+		echo "</fieldset>";
+		echo "</br>";
+		echo "</br>";
+		echo "</br>";
+	}else{
+		?>
+		<tr>
+			<td colspan="14" style="text-align: center;"><?= "<i>Data Tidak Tersedia, Silahkan Melakukan Pencarian Terlebih Dahulu</i>" ?>.</td>
+		</tr>
+		<?php
+	}
+	?>
 	<div class="row">
-
+	
 		<div class="col-xl-auto offset-xl-1">
 		</div>
 	</div>
-</div>
-
-
-<?php
-// --- Fungsi Baca Data Perbandingan Kriteria dengan Kriteria (Read)
-// function tampil_data_kriteria($koneksi){
-	$sql = "SELECT * FROM tb_alternatif";
-	$query = mysqli_query($koneksi, $sql);
-	$nomor = 1;
-	?>
-		<fieldset>
-		<div class='table-responsive'>
-		<table class='table table-responsive-sm table-bordered table-striped table-hover' id='user' border='1' cellpadding='10'>
-		<thead>
-			<tr>
-				<th border='0'>No</th>
-				<th>NIK</th>
-				<th>Nama</th>
-				<th>Alamat</th>
-				<th>Kecamatan</th>
-				<th>Kelurahan</th>
-				<th>Periode</th>
-				<th>Kondisi Atap</th>
-				<th>Kondisi Dinding</th>
-				<th>Kondisi Lantai</th>
-				<th>Sumber Air</th>
-				<th>Bahan Bakar Masak</th>
-				<th>Fasilitas BAB</th>
-				<th>Kendaraan</th>
-				<th>Hewan Ternak</th>
-				<th>Elektronik</th>
-			</tr>
-		</thead>
-		<tbody>
-	<?php
-	while($data = mysqli_fetch_array($query)){
-        $kriteria1 = "1";
-        foreach ($query as $key => $value) {
-		?>
-			<tr>
-				<td><?= $nomor++; ?></td>
-				<td><?= $value["nik"] ?></td>
-				<td><?= $value["nama_alternatif"] ?></td>
-				<td><?= $value["alamat"] ?></td>
-				<td><?= $value["kecamatan"] ?></td>
-				<td><?= $value["kelurahan"] ?></td>
-				<td><?= $value["periode"] ?></td>
-				<td><?= $value["kit1"] ?></td>
-				<td><?= $value["kit2"] ?></td>
-				<td><?= $value["kit3"] ?></td>
-				<td><?= $value["kit4"] ?></td>
-				<td><?= $value["kit5"] ?></td>
-				<td><?= $value["kit6"] ?></td>
-				<td><?= $value["kit7"] ?></td>
-				<td><?= $value["kit8"] ?></td>
-				<td><?= $value["kit9"] ?></td>
-			</tr>
-        <?php
-        }
-        ?>
-			</tbody>
-			</table>
-			</fieldset>
-			</br>
-			</br>
-			</br>
+	</div>
 
 		<?php
 // --- Tutup Fungsi Baca Data (Read)
@@ -491,10 +526,6 @@ include_once('../../_header.php');
     // var_dump($max);
 
     /* Hitung Normalisasi */
-	$sql1 = "SELECT * FROM tb_alternatif ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC";
-	$query1 = mysqli_query($koneksi, $sql1);
-	$nomor1 = 1;
-	$ranking = 1;
 	?>
 		<fieldset>
 		<div class='table-responsive'>
@@ -504,9 +535,6 @@ include_once('../../_header.php');
 				<th border='0'>No</th>
 				<th>NIK</th>
 				<th>Nama</th>
-				<th>Alamat</th>
-				<th>Kecamatan</th>
-				<th>Kelurahan</th>
 				<th>Periode</th>
 				<th>Kondisi Atap</th>
 				<th>Kondisi Dinding</th>
@@ -520,49 +548,85 @@ include_once('../../_header.php');
 				<th>jumlah</th>
 				<th>Ranking</th>
     		</tr>
+			<div class="container-fluid">
+		<li class="breadcrumb-item">
+			<h3>Hasil Normalisasi</h3>
+		</li>
+
+	<div class="row">
+
+		<div class="col-xl-auto offset-xl-1">
+		</div>
+	</div>
+</div>
+			<tr>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th><?php $jmld1 = $jmlc1/9 ; echo "$jmld1" ?></th>
+				<th><?php $jmld2 = $jmlc2/9 ; echo "$jmld2" ?></th>
+				<th><?php $jmld3 = $jmlc3/9 ; echo "$jmld3" ?></th>
+				<th><?php $jmld4 = $jmlc4/9 ; echo "$jmld4" ?></th>
+				<th><?php $jmld5 = $jmlc5/9 ; echo "$jmld5" ?></th>
+				<th><?php $jmld6 = $jmlc6/9 ; echo "$jmld6" ?></th>
+				<th><?php $jmld7 = $jmlc7/9 ; echo round($jmld7,2) ?></th>
+				<th><?php $jmld8 = $jmlc8/9 ; echo "$jmld8" ?></th>
+				<th><?php $jmld9 = $jmlc9/9 ; echo "$jmld9" ?></th>
+				<th></th>
+				<th></th>
+			</tr>
 		</thead>
 		<tbody>
-            <?php
-	while($data1 = mysqli_fetch_array($query1)){
-        // var_dump($data1);
-        foreach ($query1 as $key => $hasil) {
-		$kriteria2 = "1";
-		?> 
-			<tr>
-                <td><?= $nomor1++; ?></td>
-                <td><?= $hasil['nik'] ?></td>
-                <td><?= $hasil['nama_alternatif'] ?></td>
-                <td><?= $hasil['alamat'] ?></td>
-                <td><?= $hasil['kecamatan'] ?></td>
-                <td><?= $hasil['kelurahan'] ?></td>
-                <td><?= $hasil['periode'] ?></td>
-				<td><?= $no1=round($hasil['kit1']/$max['maxK1'],2) ?></td>
-				<td><?= $no2=round($hasil['kit2']/$max['maxK2'],2) ?></td>
-				<td><?= $no3=round($hasil['kit3']/$max['maxK3'],2) ?></td>
-				<td><?= $no4=round($hasil['kit4']/$max['maxK4'],2) ?></td>
-				<td><?= $no5=round($hasil['kit5']/$max['maxK5'],2) ?></td>
-				<td><?= $no6=round($hasil['kit6']/$max['maxK6'],2) ?></td>
-				<td><?= $no7=round($hasil['kit7']/$max['maxK7'],2) ?></td>
-				<td><?= $no8=round($hasil['kit8']/$max['maxK8'],2) ?></td>
-				<td><?= $no9=round($hasil['kit9']/$max['maxK9'],2) ?></td>
-				<?php $jm1=array(($no1*$jmld1),($no2*$jmld2),($no3*$jmld3),($no4*$jmld4),($no5*$jmld5),($no6*$jmld6),($no7*$jmld7),($no8*$jmld8),($no9*$jmld9)); ?>
-                <td><?php $jm2=array_sum($jm1); echo "$jm2" ?></td>
-                <td><?= $ranking++ ?></td>
-			</tr>
-            <?php
-        }
-            ?>
-            </tbody>
-            </table>
-            </fieldset>
-            </br>
-            </br>
-            </br>
 		<?php
-	
-
-}}
-?>
+		if(isset($_GET['cariperiode'])){
+			$cariperiode = $_GET['cariperiode'];
+			$sql1 = "SELECT * FROM tb_alternatif WHERE periode LIKE '%".$cariperiode."%' ORDER BY `kit1` DESC, `kit2` DESC, `kit3` DESC, `kit4` DESC, `kit5` DESC, `kit6` DESC, `kit7` DESC, `kit8` DESC, `kit9` DESC";
+			$query1 = mysqli_query($koneksi, $sql1);
+			$nomor1 = 1;
+			$ranking = 1;
+			while($data1 = mysqli_fetch_array($query1)){
+			// var_dump($data1);
+				foreach ($query1 as $key => $hasil) {
+				$kriteria2 = "1";
+				?> 
+					<tr>
+						<td><?= $nomor1++; ?></td>
+						<td><?= $hasil['nik'] ?></td>
+						<td><?= $hasil['nama_alternatif'] ?></td>
+						<td><?= $hasil['periode'] ?></td>
+						<td><?= $no1=round($hasil['kit1']/$max['maxK1'],2) ?></td>
+						<td><?= $no2=round($hasil['kit2']/$max['maxK2'],2) ?></td>
+						<td><?= $no3=round($hasil['kit3']/$max['maxK3'],2) ?></td>
+						<td><?= $no4=round($hasil['kit4']/$max['maxK4'],2) ?></td>
+						<td><?= $no5=round($hasil['kit5']/$max['maxK5'],2) ?></td>
+						<td><?= $no6=round($hasil['kit6']/$max['maxK6'],2) ?></td>
+						<td><?= $no7=round($hasil['kit7']/$max['maxK7'],2) ?></td>
+						<td><?= $no8=round($hasil['kit8']/$max['maxK8'],2) ?></td>
+						<td><?= $no9=round($hasil['kit9']/$max['maxK9'],2) ?></td>
+						<?php $jm1=array(($no1*$jmld1),($no2*$jmld2),($no3*$jmld3),($no4*$jmld4),($no5*$jmld5),($no6*$jmld6),($no7*$jmld7),($no8*$jmld8),($no9*$jmld9)); ?>
+						<td><?php $jm2=array_sum($jm1); echo "$jm2" ?></td>
+						<td><?= $ranking++ ?></td>
+					</tr>
+					<?php
+				}
+			}
+				?>
+				</tbody>
+				</table>
+				</fieldset>
+				</br>
+				</br>
+				</br>
+			<?php
+			} else{
+				?>
+				<tr>
+					<td colspan="14" style="text-align: center;"><?= "<i>Data Tidak Tersedia, Silahkan Melakukan Pencarian Terlebih Dahulu</i>" ?>.</td>
+				</tr>
+				<?php
+			}
+			?>
                     		</div>
                     	</div>
                     </div>

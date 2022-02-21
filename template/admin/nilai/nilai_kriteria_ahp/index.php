@@ -9,7 +9,7 @@ include_once('../../_header.php');
                     <div class="container-fluid">
                         <ol>
                             <li class="breadcrumb-item">
-                               <h3> Nilai Kriteria AHP</h3>
+                                <h3> Nilai Kriteria AHP</h3>
                             </li>
                         </ol>
 
@@ -21,6 +21,553 @@ include_once('../../_header.php');
 
 // --- Fngsi tambah data (Create)
 function tambah($koneksi){
+
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan2 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan2)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan2'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan3 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan3)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan3'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan4 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan4)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan4'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan5 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan5)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan5'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan6 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan6)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan6'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan7 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan7)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan7'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan8 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan8)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan8'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan9 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan9)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan9'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan10 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan10)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan10'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan11 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan11)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan11'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan12 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan12)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan12'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan13 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan13)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan13'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan14 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan14)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan14'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan15 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan15)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan15'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan16 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan16)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan16'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan17 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan17)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan17'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan18 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan18)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan18'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan19 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan19)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan19'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan20 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan20)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan20'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan21 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan21)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan21'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan22 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan22)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan22'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan23 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan23)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan23'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan24 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan24)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan24'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan25 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan25)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan25'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan26 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan26)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan26'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan27 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan27)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan27'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan28 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan28)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan28'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan29 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan29)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan29'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan30 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan30)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan30'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan31 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan31)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan31'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan32 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan32)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan32'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan33 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan33)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan33'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    // if (isset($_POST['btn_simpan'])) {
+    //     $nilai_perbandingan34 = $_POST['nilai_perbandingan'];
+    //     if (!empty($nilai_perbandingan34)) {
+    //         $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan34'";
+    //         $simpan = mysqli_query($koneksi, $sql);
+    //         if($simpan && isset($_GET['aksi'])){
+    //             if($_GET['aksi'] == 'create'){
+    //                 header('location: index.php');
+    //             }
+    //         }
+    //     } else {
+	// 		$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+	// 	}
+    // }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan35 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan35)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan35'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan36 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan36)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan36'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan37 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan37)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan37'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan38 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan38)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan38'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
+    if (isset($_POST['btn_simpan'])) {
+        $nilai_perbandingan39 = $_POST['nilai_perbandingan'];
+        if (!empty($nilai_perbandingan39)) {
+            $sql ="UPDATE tb_nilaikriteria SET id_nilaikri='1', id_namanilaik='1', nilai_perbandingan='$nilai_perbandingan39'";
+            $simpan = mysqli_query($koneksi, $sql);
+            if($simpan && isset($_GET['aksi'])){
+                if($_GET['aksi'] == 'create'){
+                    header('location: index.php');
+                }
+            }
+        } else {
+			$pesan = "Tidak dapat menyimpan, data belum lengkap!";
+		}
+    }
 	
 	if (isset($_POST['btn_simpan'])){
 		$nilai_perbandingan = $_POST['nilai_perbandingan'];
@@ -113,12 +660,12 @@ function tambah($koneksi){
                     </thead>
                     <tbody>
                         <tr>
-                                    <?php $sql = "SELECT * FROM tb_kriteria join tb_namakriteria limit 1, 1";
+                                    <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 0, 1";
 	                                $query = mysqli_query($koneksi, $sql); 
-                                    while($data = mysqli_fetch_assoc($query)){
+                                    while($data0 = mysqli_fetch_assoc($query)){
 						        	?>
                         <th scope="row">1</th>
-                        <td> <?= $data['nama_kriteria'] ?></td> 
+                        <td> <?= $data0['nama_kriteria'] ?></td> 
                         <td><select name="nilai_perbandingan">
                         <?php 
 						        	
@@ -126,23 +673,39 @@ function tambah($koneksi){
 	                                $query = mysqli_query($koneksi, $sql); 
                                     while($data = mysqli_fetch_array($query)){
 						        	 ?>
-                        <option value="1/<?= $data['nilai_perbandingan2']?>" <?php if($data["nilai_perbandingan"]==1){echo "selected";}?>>1.Sama Penting Dengan</option>
-                        <option value="2/<?= $data['nilai_perbandingan2']?>" <?php if($data["nilai_perbandingan"]==2){echo "selected";}?>>2.Mendekati Sedikit Lebih Penting dari</option>
-                        <option value="3/<?= $data['nilai_perbandingan2']?>" <?php if($data["nilai_perbandingan"]==3){echo "selected";}?>>3.Sedikit Lebih Penting dari</option>
-                        <option value="4/<?= $data['nilai_perbandingan2']?>" <?php if($data["nilai_perbandingan"]==4){echo "selected";}?>>4.Mendekati Lebih Penting dari</option>
-                        <option value="5/<?= $data['nilai_perbandingan2']?>" <?php if($data["nilai_perbandingan"]==5){echo "selected";}?>>5.Lebih Penting dari</option>
-                        <option value="6/<?= $data['nilai_perbandingan2']?>" <?php if($data["nilai_perbandingan"]==6){echo "selected";}?>>6.Mendekati Sangat Penting dari</option>
-                        <option value="7/<?= $data['nilai_perbandingan2']?>" <?php if($data["nilai_perbandingan"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
-                        <option value="8/<?= $data['nilai_perbandingan2']?>" <?php if($data["nilai_perbandingan"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
-                        <option value="9/<?= $data['nilai_perbandingan2']?>" <?php if($data["nilai_perbandingan"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
+                        <option value="1" <?php if($data["nilai_perbandingan"]==1){echo "selected";}?>>1.Sama Penting Dengan</option>
+                        <option value="2" <?php if($data["nilai_perbandingan"]==2){echo "selected";}?>>2.Mendekati Sedikit Lebih Penting dari</option>
+                        <option value="3" <?php if($data["nilai_perbandingan"]==3){echo "selected";}?>>3.Sedikit Lebih Penting dari</option>
+                        <option value="4" <?php if($data["nilai_perbandingan"]==4){echo "selected";}?>>4.Mendekati Lebih Penting dari</option>
+                        <option value="5" <?php if($data["nilai_perbandingan"]==5){echo "selected";}?>>5.Lebih Penting dari</option>
+                        <option value="6" <?php if($data["nilai_perbandingan"]==6){echo "selected";}?>>6.Mendekati Sangat Penting dari</option>
+                        <option value="7" <?php if($data["nilai_perbandingan"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
+                        <option value="8" <?php if($data["nilai_perbandingan"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
+                        <option value="9" <?php if($data["nilai_perbandingan"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
                         </select>                                       
                         </td>
-                        <td>K2 - Kondisi Dinding</td>
-                        </tr>                                           <?php }}?>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 1, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data1 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data1['nama_kriteria'] ?></td>
+                        </tr>                                           <?php }}}?>
 
                         <tr>
+                            <?php $sql = "SELECT * FROM tb_kriteria join tb_namakriteria limit 1, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">2</th>
-                        <td> K1 - Kondisi Atap</td>
+                        <td> <?= $data['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan2">
                         <?php 
 						        	
@@ -159,14 +722,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan2"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan2"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan2"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K3 - Kondisi Lantai</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 2, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data2 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data2['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria join tb_namakriteria limit 1, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">3</th>
-                        <td> K1 - Kondisi Atap</td>
+                        <td> <?= $data['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan3">
                         <?php 
 						        	
@@ -183,14 +762,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan3"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan3"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan3"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K4 - Sumber Air</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 3, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data3 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data3['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria join tb_namakriteria limit 1, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">4</th>
-                        <td> K1 - Kondisi Atap</td>
+                        <td> <?= $data['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan4">
                         <?php 
 						        	
@@ -207,17 +802,32 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan4"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan4"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan4"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K5 - Bahan Bakar Masak</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 4, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data5 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data5['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria join tb_namakriteria limit 1, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">5</th>
-                        <td> K1 - Kondisi Atap</td>
+                        <td> <?= $data['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan5">
                         <?php 
-						        	
 									$sql = "SELECT * FROM tb_nilaikriteria";
 	                                $query = mysqli_query($koneksi, $sql); 
                                     while($data = mysqli_fetch_array($query)){
@@ -231,14 +841,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan5"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan5"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan5"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K6 - Fasilitas BAB</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 5, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data4 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data4['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria join tb_namakriteria limit 1, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">6</th>
-                        <td> K1 - Kondisi Atap</td>
+                        <td> <?= $data['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan6">
                         <?php 
 						        	
@@ -255,14 +881,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan6"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan6"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan6"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K7 - Kendaraan</td>
-                        </tr>
-
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 6, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data6 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data6['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
+                        
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria join tb_namakriteria limit 1, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">7</th>
-                        <td> K1 - Kondisi Atap</td>
+                        <td> <?= $data['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan7">
                         <?php 
 						        	
@@ -279,14 +921,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan7"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan7"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan7"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K8 - Hewan Ternak</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 7, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data7 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data7['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria join tb_namakriteria limit 1, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">8</th>
-                        <td> K1 - Kondisi Atap</td>
+                        <td> <?= $data['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan8">
                         <?php 
 						        	
@@ -303,14 +961,31 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan8"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan8"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan8"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K9 - Elektronik</td>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 8, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data8 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data8['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
                         </tr>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 1, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data1 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">9</th>
-                        <td> K2 - Kondisi Dinding</td>
+                        <td> <?= $data1['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan9">
                         <?php 
 						        	
@@ -327,14 +1002,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan9"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan9"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan9"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K3 - Kondisi Lantai</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 2, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data2 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data2['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 1, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data1 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">10</th>
-                        <td> K2 - Kondisi Dinding</td>
+                        <td> <?= $data1['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan10">
                         <?php 
 						        	
@@ -351,14 +1042,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan10"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan10"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan10"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K4 - Sumber Air</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 3, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data3 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data3['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 1, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data1 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">11</th>
-                        <td> K2 - Kondisi Dinding</td>
+                        <td> <?= $data1['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan11">
                         <?php 
 						        	
@@ -375,14 +1082,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan11"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan11"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan11"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K5 - Bahan Bakar Masak</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 4, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data4 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data4['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 1, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data1 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">12</th>
-                        <td> K2 - Kondisi Dinding</td>
+                        <td> <?= $data1['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan12">
                         <?php 
 						        	
@@ -399,14 +1122,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan12"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan12"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan12"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K6 - Fasilitas BAB</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 5, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data5 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data5['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 1, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data1 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">13</th>
-                        <td> K2 - Kondisi Dinding</td>
+                        <td> <?= $data1['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan13">
                         <?php 
 						        	
@@ -423,14 +1162,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan13"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan13"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan13"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K7 - Kendaraan</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 6, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data6 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data6['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 1, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data1 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">14</th>
-                        <td> K2 - Kondisi Dinding</td>
+                        <td> <?= $data1['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan14">
                         <?php 
 						        	
@@ -447,14 +1202,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan14"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan14"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan14"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K8 - Hewan Ternak</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 7, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data7 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data7['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 1, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data1 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">15</th>
-                        <td> K2 - Kondisi Dinding</td>
+                        <td> <?= $data1['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan15">
                         <?php 
 						        	
@@ -471,14 +1242,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan15"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan15"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan15"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K9 - Elektronik</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 8, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data8 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data8['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 2, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data2 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">16</th>
-                        <td> K3 - Kondisi Lantai</td>
+                        <td> <?= $data2['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan16">
                         <?php 
 						        	
@@ -495,14 +1282,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan16"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan16"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan16"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K4 - Sumber Air</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 3, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data3 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data3['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 2, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data2 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">17</th>
-                        <td> K3 - Kondisi Lantai</td>
+                        <td> <?= $data2['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan17">
                         <?php 
 						        	
@@ -519,14 +1322,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan17"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan17"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan17"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K5 - Bahan Bakar Masak</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 4, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data4 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data4['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 2, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data2 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">18</th>
-                        <td> K3 - Kondisi Lantai</td>
+                        <td> <?= $data2['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan18">
                         <?php 
 						        	
@@ -543,14 +1362,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan18"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan18"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan18"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K6 - Fasilitas BAB</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 5, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data5 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data5['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 2, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data2 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">19</th>
-                        <td> K3 - Kondisi Lantai</td>
+                        <td> <?= $data2['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan19">
                         <?php 
 						        	
@@ -567,14 +1402,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan19"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan19"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan19"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K7 - Kendaraan</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 6, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data6 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data6['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 2, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data2 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">20</th>
-                        <td> K3 - Kondisi Lantai</td>
+                        <td> <?= $data2['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan20">
                         <?php 
 						        	
@@ -591,14 +1442,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan20"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan20"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan20"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K8 - Hewan Ternak</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 7, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data7 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data7['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 2, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data2 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">21</th>
-                        <td> K3 - Kondisi Lantai</td>
+                        <td> <?= $data2['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan21">
                         <?php 
 						        	
@@ -615,14 +1482,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan21"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan21"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan21"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K9 - Elektronik</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 8, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data8 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data8['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 3, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data3 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">22</th>
-                        <td> K4 - Sumber Air</td>
+                        <td> <?= $data3['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan22">
                         <?php 
 						        	
@@ -639,14 +1522,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan22"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan22"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan22"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K5 - Bahan Bakar Masak</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 4, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data4 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data4['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 3, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data3 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">23</th>
-                        <td> K4 - Sumber Air</td>
+                        <td> <?= $data3['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan23">
                         <?php 
 						        	
@@ -663,14 +1562,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan23"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan23"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan23"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K6 - Fasilitas BAB</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 5, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data5 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data5['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 3, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data3 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">25</th>
-                        <td> K4 - Sumber Air</td>
+                        <td> <?= $data3['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan25">
                         <?php 
 						        	
@@ -687,14 +1602,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan25"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan25"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan25"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K7 - Kendaraan</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 6, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data6 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data6['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
                         
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 3, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data3 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">26</th>
-                        <td> K4 - Sumber Air</td>
+                        <td> <?= $data3['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan26">
                         <?php 
 						        	
@@ -711,14 +1642,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan26"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan26"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan26"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K8 - Hewan Ternak</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 7, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data7 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data7['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 3, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data3 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">27</th>
-                        <td> K4 - Sumber Air</td>
+                        <td> <?= $data3['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan27">
                         <?php 
 						        	
@@ -735,14 +1682,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan26"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan26"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan26"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K9 - Elektronik</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 8, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data8 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data8['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 4, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data4 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">29</th>
-                        <td> K5 - Bahan Bakar Masak</td>
+                        <td> <?= $data4['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan29">
                         <?php 
 						        	
@@ -759,14 +1722,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan29"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan29"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan29"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K6 - Fasilitas BAB</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 5, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data5 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data5['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 4, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data4 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">30</th>
-                        <td> K5 - Bahan Bakar Masak</td>
+                        <td> <?= $data4['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan30">
                         <?php 
 						        	
@@ -783,14 +1762,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan30"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan30"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan30"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K7 - Kendaraan</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 6, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data6 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data6['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 4, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data4 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">31</th>
-                        <td> K5 - Bahan Bakar Masak</td>
+                        <td><?= $data4['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan31">
                         <?php 
 						        	
@@ -807,14 +1802,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan31"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan31"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan31"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K8 - Hewan Ternak</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 7, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data7 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data7['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 4, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data4 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">32</th>
-                        <td> K5 - Bahan Bakar Masak</td>
+                        <td> <?= $data4['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan32">
                         <?php 
 						        	
@@ -831,14 +1842,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan32"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan32"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan32"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K9 - Elektronik</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 8, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data8 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data8['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 5, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data5 = mysqli_fetch_assoc($query)){
+						        	?>
                         <th scope="row">33</th>
-                        <td> K6 - Fasilitas BAB</td>
+                        <td> <?= $data5['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan33">
                         <?php 
 						        	
@@ -855,14 +1882,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan33"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan33"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan33"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K7 - Kendaraan</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 6, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data6 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data6['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
-                        <th scope="row">35</th>
-                        <td> K6 - Fasilitas BAB</td>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 5, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data5 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <th scope="row">34</th>
+                        <td> <?= $data5['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan35">
                         <?php 
 						        	
@@ -879,14 +1922,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan35"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan35"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan35"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K8 - Hewan Ternak</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 7, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data7 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data7['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
-                        <th scope="row">36</th>
-                        <td> K6 - Fasilitas BAB</td>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 5, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data5 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <th scope="row">35</th>
+                        <td> <?= $data5['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan36">
                         <?php 
 						        	
@@ -903,14 +1962,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan36"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan36"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan36"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K9 - Elektronik</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 8, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data8 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data8['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
-                        <th scope="row">37</th>
-                        <td> K7 - Kendaraan</td>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 6, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data6 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <th scope="row">36</th>
+                        <td> <?= $data6['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan37">
                         <?php 
 						        	
@@ -927,14 +2002,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan37"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan37"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan37"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K8 - Hewan Ternak</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 7, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data7 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data7['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
-                        <th scope="row">38</th>
-                        <td> K7 - Kendaraan</td>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 6, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data6 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <th scope="row">37</th>
+                        <td> <?= $data6['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan38">
                         <?php 
 						        	
@@ -951,14 +2042,30 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan38"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan38"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan38"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K9 - Elektronik</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 8, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data8 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data8['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
-                        <th scope="row">39</th>
-                        <td> K8 - Hewan Ternak</td>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 7, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data7 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <th scope="row">38</th>
+                        <td> <?= $data7['nama_kriteria'] ?></td>
                         <td><select name="nilai_perbandingan39">
                         <?php 
 						        	
@@ -975,10 +2082,22 @@ function tambah($koneksi){
                         <option value="7" <?php if($data["nilai_perbandingan34"]==7){echo "selected";}?>>7.Sangat Penting dari</option>
                         <option value="8" <?php if($data["nilai_perbandingan34"]==8){echo "selected";}?>>8.Mendekati Mutlak dari</option>
                         <option value="9" <?php if($data["nilai_perbandingan34"]==9){echo "selected";}?>>9.Mutlak Sangat Penting</option>
-                        </select><?php } ?>
+                        <option value="0.5" <?php if($data["nilai_perbandingan"]==0.5){echo "selected";}?>>1/2.Kali Lebih Penting Dari</option>
+                        <option value="0.3" <?php if($data["nilai_perbandingan"]==0.3){echo "selected";}?>>1/3.Kali Lebih Penting Dari</option>
+                        <option value="0.25" <?php if($data["nilai_perbandingan"]==0.25){echo "selected";}?>>1/4.Kali Lebih Penting Dari</option>
+                        <option value="0.2" <?php if($data["nilai_perbandingan"]==0.2){echo "selected";}?>>1/5.Kali Lebih Penting Dari</option>
+                        <option value="0.16" <?php if($data["nilai_perbandingan"]==0.16){echo "selected";}?>>1/6.Kali Lebih Penting Dari</option>
+                        <option value="0.14" <?php if($data["nilai_perbandingan"]==0.14){echo "selected";}?>>1/7.Kali Lebih Penting Dari</option>
+                        <option value="0.125" <?php if($data["nilai_perbandingan"]==0.125){echo "selected";}?>>1/8.Kali Lebih Penting Dari</option>
+                        <option value="0.11" <?php if($data["nilai_perbandingan"]==0.11){echo "selected";}?>>1/9.Kali Lebih Penting Dari</option>
+                        </select>
                         </td>
-                        <td>K9 - Elektronik</td>
-                        </tr>
+                        <?php $sql = "SELECT * FROM tb_kriteria inner join tb_namakriteria on tb_kriteria.id_namakriteria = tb_namakriteria.id_namakriteria limit 8, 1";
+	                                $query = mysqli_query($koneksi, $sql); 
+                                    while($data8 = mysqli_fetch_assoc($query)){
+						        	?>
+                        <td><?= $data8['nama_kriteria'] ?></td>
+                        </tr><?php }}} ?>
 
                         <tr>
 							<td></td>

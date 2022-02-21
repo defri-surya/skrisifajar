@@ -1,0 +1,18 @@
+Login 000.webhost
+Email : ardyfajar8@gmail.com
+Password : Pecel_lele12
+
+Login File Manager 000.webhost
+Username : SkripsiFajar2022
+Password : 7LCVQ8n*%KCllR3iat4d
+
+Database
+Username : dbfajar
+Password : Ju=@aYlh3Vklm@>&
+
+DB Host : localhost
+DB Name : id18484144_db_spk
+DB User : id18484144_dbfajar
+
+Domain
+https://skripsifajar2022.000webhostapp.com/template/admin
